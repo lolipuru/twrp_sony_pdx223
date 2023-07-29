@@ -43,18 +43,13 @@ subsystem dma_heap
 /dev/vndbinder            0666   root       root
 
 /dev/pmsg0                0222   root       log
+/dev/pmsg1                0222   root       log
 /dev/dma_heap/system      0444   system     system
 /dev/dma_heap/system-uncached      0444   system     system
 /dev/dma_heap/system-secure        0444   system     system
 
 # kms driver for drm based gpu
 /dev/dri/*                0666   root       graphics
-
-# mius iio devices
-/dev/iio:device*                                        0660   system     system
-/sys/bus/iio/devices/iio:device* buffer/enable                  0600 system system
-/sys/bus/iio/devices/iio:device* scan_elements/in_proximity_en  0600 system system
-/sys/bus/iio/devices/iio:device* scan_elements/in_timestamp_en  0600 system system
 
 # these should not be world writable
 /dev/uhid                 0660   uhid       uhid
@@ -85,3 +80,6 @@ subsystem dma_heap
 /sys/devices/system/cpu/cpu*   cpufreq/scaling_min_freq   0664  system system
 /sys/devices/virtual/misc/uhid/*/leds/* brightness   0664  system system
 /sys/devices/virtual/misc/uhid/*/leds/* multi_intensity   0664  system system
+
+# Add TA block device permission
+/dev/block/platform/soc/1d84000.ufshc/by-name/TA        0660   oem_2997   oem_2997

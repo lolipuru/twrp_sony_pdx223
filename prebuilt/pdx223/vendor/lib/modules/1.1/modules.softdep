@@ -1,0 +1,11 @@
+# Soft dependencies extracted from modules themselves.
+softdep q6_notifier_dlkm pre: qcom_q6v5_pas
+softdep msm_video pre: subsys-pil-tz msm-mmrm
+softdep sony_camera pre: slg51000-regulator
+softdep msm_eva pre: msm-mmrm
+softdep slg51000_regulator pre: somc-pinctrl-pmic
+softdep msm_cvp pre: msm-mmrm
+softdep machine_dlkm pre: bt_fm_slim
+softdep msm_drm pre: msm-mmrm
+softdep ipam pre: subsys-pil-tz
+softdep ipam pre: qcom-arm-smmu-mod

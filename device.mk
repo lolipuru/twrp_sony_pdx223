@@ -23,7 +23,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 $(call inherit-product, vendor/twrp/config/common.mk)
 
 PRODUCT_PACKAGES += \
-    bootctrl.xiaomi_sm8550.recovery \
+    bootctrl.sony_sm8450.recovery \
     android.hardware.boot@1.2-impl-qti.recovery
 
 # SHIPPING API
@@ -39,4 +39,4 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 PRODUCT_SOONG_NAMESPACES += $(DEVICE_PATH)
 
 TWRP_REQUIRED_MODULES += \
-    miui_prebuilt
+    sony_prebuilt
