@@ -148,8 +148,7 @@ TW_DEFAULT_BRIGHTNESS := 200
 TW_EXCLUDE_APEX := true
 TW_HAS_EDL_MODE := true
 # Haptic
-TW_SUPPORT_INPUT_AIDL_HAPTICS := true
-TW_SUPPORT_INPUT_AIDL_HAPTICS_FQNAME := "IVibrator/default"
+TW_NO_HAPTICS := true
 #TW_NO_SCREEN_BLANK := true
 TW_LOAD_VENDOR_MODULES := "adsp_loader_dlkm.ko sec_touchscreen.ko qti_battery_charger.ko"
 TW_CUSTOM_CPU_TEMP_PATH := "/sys/class/thermal/thermal_zone35/temp"
