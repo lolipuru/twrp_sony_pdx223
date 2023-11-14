@@ -39,10 +39,11 @@ on init
     start boot-hal-1-2
 
 on boot
-    write /sys/devices/virtual/sec/tsp/after_work 1
     setprop sys.usb.config adb
 
 on property:twrp.modules.loaded=true
+    # Write touch node
+    write /sys/devices/virtual/sec/tsp/after_work 1
     # Mount firmware
     mkdir /firmware
     mount vfat /dev/block/bootdevice/by-name/modem${ro.boot.slot_suffix} /firmware ro
