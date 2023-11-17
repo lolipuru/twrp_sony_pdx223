@@ -41,8 +41,10 @@ on early-boot
 
 service vendor.vibrator.cs40l25 /vendor/bin/hw/android.hardware.vibrator-service.cs40l25
     class hal
-    user system
-    group system
+    user root
+    group root input audio
+    onrestart restart vendor.vibrator.cs40l25
+    setenv LD_LIBRARY_PATH /vendor/lib64:/vendor/lib64/hw:/system/lib64:/sbin
 
     setenv PROPERTY_PREFIX ro.vibrator.hal.
 
@@ -63,3 +65,4 @@ service vendor.vibrator.cs40l25 /vendor/bin/hw/android.hardware.vibrator-service
         "
 
     disabled
+    seclabel u:r:recovery:s0
