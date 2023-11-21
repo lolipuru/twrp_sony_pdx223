@@ -1,8 +1,5 @@
 # unified twrp for nagara platform
 
-## Warning
-Keymaster is completely dead, twrp device tree is "still WIP", not for general use until km issues has been fixed
-
 ## Features
 
 Works:
@@ -13,10 +10,11 @@ Works:
 - MTP
 - Flashing (opengapps, roms, images and so on)
 - Backup
+- Sdcard
 
 ## Partially working
 - USB OTG
-- Sdcard (need to access with /storage/sdcard/1-1)
+- Vibration (unable to create path for drivers)
 
 ## Compile
 
